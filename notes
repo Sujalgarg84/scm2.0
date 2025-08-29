@@ -1,0 +1,17 @@
+// "How to include tailwind and flowbite in your HTML file..":
+
+
+1) command use in the terminal to auto updation view on browser during updation of code: "npx tailwindcss -i src/main/resources/static/css/input.css -o src/main/resources/static/css/output.css --watch"   run
+                        this command in the terminal..
+
+2)  jis bhi page pr hme tailwind css chaiye to usme include kr do ye command in the html page --
+
+                    "<link rel="stylesheet" data-th-href="@{/css/output.css}">"
+
+3)  I you want flowbite to make the tailwind components: include its cdn of css and js.
+
+<!-- //                                           ThymeLeaf Fragments..                                            -->
+
+<div th:replace="${#authentication.principal.isAdmin()} ? ~{fragments/footer :: footer-admin} : ~{fragments/footer :: footer-admin}">
+  &copy; 2016 The Static Templates
+</div>
